@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  job_1:
     docker:
       - image: alpine
     steps:
@@ -11,4 +11,16 @@ jobs:
           root: /root/project
           paths:
             - Games
-         #  - baz
+
+  job_2:
+    docker: 
+      - image: alpine 
+    steps:
+      - attach_workspace:
+          at: /root/project
+
+workflows:
+  workflows_1:
+    jobs:
+      - job_1
+      - job_2
