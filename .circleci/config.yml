@@ -5,7 +5,7 @@ jobs:
       - image: alpine
     steps:
       - persist_to_workspace:
-          root: /tmp/dir
+          root: /mydir/
           paths:
             - foo/bar
             - baz
