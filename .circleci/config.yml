@@ -1,0 +1,11 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: alpine
+    steps:
+      - persist_to_workspace:
+          root: /tmp/dir
+          paths:
+            - foo/bar
+            - baz
