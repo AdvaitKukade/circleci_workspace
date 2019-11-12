@@ -8,9 +8,8 @@ jobs:
       - run: mkdir Games
       - run: apk add ca-certificates
       - persist_to_workspace:
-          root: /root/project
-          paths:
-            - Games
+          root: ~/
+          paths: project/Games
 
   job_2:
     docker: 
