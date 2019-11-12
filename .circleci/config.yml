@@ -4,9 +4,12 @@ jobs:
     docker:
       - image: alpine
     steps:
-    # - run: cd /
+      - run: ls -al
+      - run: cd /
+      - run: ls -al
       - persist_to_workspace:
           root: /root/project
           paths:
             - foo/bar
             - baz
+Failed
