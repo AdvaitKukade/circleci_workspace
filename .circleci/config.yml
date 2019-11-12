@@ -10,5 +10,5 @@ jobs:
       - persist_to_workspace:
           root: /root/project
           paths:
-            - Games/NFS
+            - Games
          #  - baz
