@@ -7,7 +7,7 @@ jobs:
       - run: pwd
       - run: mkdir Games
       - persist_to_workspace:
-          root: /root/project/Games
+          root: /root/project
           paths:
-            - foo/bar
-            - baz
+            - Games
+         #  - baz
