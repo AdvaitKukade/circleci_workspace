@@ -16,8 +16,7 @@ jobs:
           paths: project/file1
                  project/file2
                  project/file3
-                 project/file4
-                 
+                 project/file4                 
 
   job_2:
     docker: 
@@ -26,6 +25,12 @@ jobs:
       - run: apk add ca-certificates
       - attach_workspace:
           at: myfiles/
+          
+  job_3:
+    docker:
+      - image: alpine
+    steps:
+      - run: "In Job_3" 
 
 workflows:
   workflows_1:
@@ -35,3 +40,6 @@ workflows:
           type: approval
           requires:
             - job_1
+      - job_3:
+          requires:
+            - job_2
