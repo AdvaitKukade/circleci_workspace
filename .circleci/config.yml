@@ -5,7 +5,7 @@ jobs:
       - image: alpine
     steps:
       - run: pwd
-      - run: touch file1
+      - run: echo "Hello i am groot" >> file1
       - run: apk add ca-certificates
       - persist_to_workspace:
           root: ~/
@@ -17,7 +17,7 @@ jobs:
     steps:
       - run: apk add ca-certificates
       - attach_workspace:
-          at: project/file1
+          at: file1
 
 workflows:
   workflows_1:
