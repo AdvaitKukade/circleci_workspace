@@ -5,11 +5,9 @@ jobs:
       - image: alpine
     steps:
       - run: pwd
-      - run: ls -al
-      - run: cd /
-      - run: ls -al
+      - run: mkdir Games
       - persist_to_workspace:
-          root: /root/project
+          root: /root/project/Games
           paths:
             - foo/bar
             - baz
