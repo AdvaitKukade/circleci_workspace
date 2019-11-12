@@ -25,7 +25,7 @@ jobs:
     steps:
       - run: apk add ca-certificates
       - attach_workspace:
-          at: /root/home/myfiles
+          at: myfiles/
 
 workflows:
   workflows_1:
