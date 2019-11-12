@@ -6,6 +6,9 @@ jobs:
     steps:
       - run: pwd
       - run: echo "Hello i am groot" >> file1
+      - run: echo "Hello i am root" >> file2
+      - run: echo "Hello i am tree" >> file3
+      - run: echo "Hello i am "Leaves" >> file4 
       - run: apk add ca-certificates
       - persist_to_workspace:
           root: ~/
@@ -17,7 +20,7 @@ jobs:
     steps:
       - run: apk add ca-certificates
       - attach_workspace:
-          at: /root/home
+          at: /root/home/myfiles
 
 workflows:
   workflows_1:
