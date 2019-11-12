@@ -12,4 +12,3 @@ jobs:
           paths:
             - foo/bar
             - baz
-Failed
