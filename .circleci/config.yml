@@ -9,6 +9,7 @@ jobs:
       - run: echo "Hello i am root" >> file2
       - run: echo "Hello i am tree" >> file3
       - run: echo "Hello i am Leaves" >> file4 
+      - run: cd ../ && ls -al
       - run: apk add ca-certificates
       - persist_to_workspace:
           root: ~/
@@ -16,6 +17,7 @@ jobs:
                  project/file2
                  project/file3
                  project/file4
+                 
 
   job_2:
     docker: 
