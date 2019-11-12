@@ -9,7 +9,7 @@ jobs:
       - run: echo "Hello i am root" >> file2
       - run: echo "Hello i am tree" >> file3
       - run: echo "Hello i am Leaves" >> file4 
-      - run: cd ../ && ls -al
+      - run: cd ../../ && ls -al
       - run: apk add ca-certificates
       - persist_to_workspace:
           root: ~/
