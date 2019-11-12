@@ -6,7 +6,7 @@ jobs:
     steps:
       - run: pwd
       - run: mkdir Games
-      - apk add --no cache ca-certificate
+      - run: apk add ca-certificates
       - persist_to_workspace:
           root: /root/project
           paths:
