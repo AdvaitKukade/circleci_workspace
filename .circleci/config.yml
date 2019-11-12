@@ -9,12 +9,13 @@ jobs:
       - run: apk add ca-certificates
       - persist_to_workspace:
           root: ~/
-          paths: project/Games
+          paths: root/project/Games
 
   job_2:
     docker: 
       - image: alpine 
     steps:
+      - run: apk add ca-certificates
       - attach_workspace:
           at: /root/project/
 
