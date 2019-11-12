@@ -17,7 +17,7 @@ jobs:
       - image: alpine 
     steps:
       - attach_workspace:
-          at: /root/project
+          at: /root/project/Games 
 
 workflows:
   workflows_1:
