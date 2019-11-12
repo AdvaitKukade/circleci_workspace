@@ -30,7 +30,7 @@ jobs:
     docker:
       - image: alpine
     steps:
-      - run: "In Job_3" 
+      - run: echo "In Job_3" 
 
 workflows:
   workflows_1:
