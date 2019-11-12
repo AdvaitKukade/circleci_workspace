@@ -4,6 +4,7 @@ jobs:
     docker:
       - image: alpine
     steps:
+      - run: pwd
       - run: ls -al
       - run: cd /
       - run: ls -al
