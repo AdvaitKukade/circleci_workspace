@@ -5,11 +5,11 @@ jobs:
       - image: alpine
     steps:
       - run: pwd
-      - run: mkdir Games
+      - run: touch file1
       - run: apk add ca-certificates
       - persist_to_workspace:
           root: ~/
-          paths: root/project/Games
+          paths: project/file1
 
   job_2:
     docker: 
@@ -17,10 +17,12 @@ jobs:
     steps:
       - run: apk add ca-certificates
       - attach_workspace:
-          at: /root/project/
+          at: project/file1
 
 workflows:
   workflows_1:
     jobs:
       - job_1
-      - job_2
+      - job_2:
+          requires:
+            - job_1
