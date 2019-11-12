@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: alpine
     steps:
-      - run: cd /
+    # - run: cd /
       - persist_to_workspace:
           root: /root/project
           paths:
