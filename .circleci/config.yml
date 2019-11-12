@@ -4,8 +4,9 @@ jobs:
     docker:
       - image: alpine
     steps:
+      - run: cd /
       - persist_to_workspace:
-          root: /mydir/
+          root: /tmp/dir
           paths:
             - foo/bar
             - baz
